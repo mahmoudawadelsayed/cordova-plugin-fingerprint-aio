@@ -48,12 +48,16 @@ enum PluginError:Int {
                 switch(authenticationContext.biometryType) {
                 case .none:
                     biometryType = "none";
+                    break;
                 case .touchID:
                     biometryType = "finger";
+                    break;
                 case .faceID:
                     biometryType = "face";
+                    break;
                 @unknown default:
-                    errorResponse["message"] = "Unkown biometry type"
+                    errorResponse["message"] = "Unkown biometry type";
+                    break;
                 }
             }
 
